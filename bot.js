@@ -7,7 +7,7 @@ var HTTPS = require('https');
 
 	function respond() {
 	  var request = JSON.parse(this.req.chunks[0]),
-	      botRegexInjuries = /^\/injuries/; botRegex = /^\/week/;  botRegexDL = /^\/ros/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
+	      botRegex = /^\/week/;  botRegexDL = /^\/ros/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
 	      botRegexAd=/^\/standings/;botRegexGTA = /^\/DL/; botRegexSC = /^\/sch/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
 	      botRegexP = /^\/ply/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/don/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
 	      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
@@ -22,17 +22,13 @@ var HTTPS = require('https');
 	                "MIA","BUF","SF","WAS","NYJ","TB"]
 	  if(request.text && botRegex.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/MFLMaddenLg/schedules");
+	    postMessage("Oops! Doesn't look like we have a DL yet!");
+	    //postMessage("http://daddyleagues.com/MFLMaddenLg/schedules");
 	    this.res.end();
 	  }
-	  else if(request.text && botRegexInjuries.test(request.text)) {
-	    this.res.writeHead(200);
-	    postMessage("https://docs.google.com/spreadsheets/d/1Q5pe7VtPB3dnl6e3OLGFOf7GH5SS9ZO7tzQP_TRXWTU/edit?usp=sharing");
-	    this.res.end();
-	  } 
 	  else if(request.text && botRegexSlut.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("'Command' -- 'Function' \n/rules -- MFLMaddenLg rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DaddyLeagues Page  \n/standings -- Division Standings  \n/twitch 'username' -- Twitch Stream  \n/users -- Users list  \n/trades -- Current trade standing");
+	    postMessage("'Command' -- 'Function' \n/rules -- AGS league rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DaddyLeagues Page  \n/standings -- Division Standings  \n/twitch 'username' -- Twitch Stream  \n/users -- Users list  \n/trades -- Current trade standing");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexWelcome.test(request.text)) {
@@ -52,7 +48,7 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexTrade.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("https://docs.google.com/spreadsheets/d/14loL2UrLo73UcGXRF4Va6cYRSj3G5eTrC0KxTXQU7CA/edit?usp=sharing");
+	    postMessage("https://docs.google.com/spreadsheets/d/1drm-GDQOTgaQMO19bTNyrbRxeGGKi0Zk2rqdb-u2R_0/edit?usp=sharing");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexL.test(request.text)) {
@@ -75,11 +71,6 @@ var HTTPS = require('https');
 	    postMessage("https://scontent-atl3-1.cdninstagram.com/t51.2885-15/sh0.08/e35/p750x750/15802423_676357055876908_4292183087745335296_n.jpg?ig_cache_key=MTQyNTA1ODQzMzE3NDY1MDI2NA%3D%3D.2");
 	    this.res.end();
 	  } 
-	  else if(request.text && botRegexTrade.test(request.text)) {
-	    this.res.writeHead(200);
-	    postMessage("https://docs.google.com/document/d/1kwQ8LUja0_0UbJhRhste4TFseSyxVFlhAI9Slps1oqg/edit");
-	    this.res.end();
-	  } 
 	  else if(request.text && botRegexNooo.test(request.text)) {
 	    this.res.writeHead(200);
 	    postMessage("http://www.gifbin.com/bin/092009/1253886001_office-no.gif");
@@ -87,8 +78,8 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexDL.test(request.text)) {
 	    this.res.writeHead(200);
-	    //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
-	    postMessage("http://daddyleagues.com/MFLMaddenLg/team/"+request.text.substring(5,8)+"/depthchart");
+	    postMessage("Oops! Doesn't look like we have a DL yet!");
+	    //postMessage("http://daddyleagues.com/MFLMaddenLg/team/"+request.text.substring(5,8)+"/depthchart");
 	    this.res.end();
 	  } 
 	  
@@ -104,31 +95,33 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexAd.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/MFLMaddenLg/standings");
+	    postMessage("Oops! Doesn't look like we have a DL yet!");
+	    //postMessage("http://daddyleagues.com/MFLMaddenLg/standings");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexRules.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("https://docs.google.com/document/d/1GBdHvr876vYg4cDRDl4zc9FmexFasiIKEKd_Nt4ygSw/edit");
+	    postMessage("https://docs.google.com/document/d/1wdnMYqdCkZ7NzPB314xGA38QVY5sUsP8Jx19hWa1UMc/edit?usp=sharing");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexGTA.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("http://daddyleagues.com/MFLMaddenLg");
+	    postMessage("Oops! Doesn't look like we have a DL yet!");
+	    //postMessage("http://daddyleagues.com/MFLMaddenLg");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexSC.test(request.text)) {
 	    this.res.writeHead(200);
-	    
-	    postMessage("http://daddyleagues.com/MFLMaddenLg/team/"+request.text.substring(5,8)+"/schedule");
+	    postMessage("Oops! Doesn't look like we have a DL yet!");
+	    //postMessage("http://daddyleagues.com/MFLMaddenLg/team/"+request.text.substring(5,8)+"/schedule");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexP.test(request.text)) {
 	    this.res.writeHead(200);
 	    var req = request.text.substring(5,request.text.length);
 	    var rep = req.replace(/ /,"+");
-	    postMessage("http://daddyleagues.com/MFLMaddenLg/players?name="+rep+"&position=all&team=all");
-	    
+	    //postMessage("http://daddyleagues.com/MFLMaddenLg/players?name="+rep+"&position=all&team=all");
+	    postMessage("Oops! Doesn't look like we have a DL yet!");
 	    this.res.end();
 	  }  
 	
@@ -175,7 +168,7 @@ var HTTPS = require('https');
 	  }
 	  else if(request.text && botRegexSchedule.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("Welcome to MFL! If you are new to this type of league, be sure to check out the rules while you're here. We have a bot that can link the rules for you by typing /rules. Type /help to see what else the bot can do! League name is MFL MaddenFootballLg, Password is abcd12345.");
+	    postMessage("Welcome to AGS! If you are new to this type of league, be sure to check out the rules while you're here. We have a bot that can link the rules for you by typing /rules. Type /help to see what else the bot can do! League name is AnyGivenSunday, Password is LionsSuck.");
 	    this.res.end();
 	  }
 	  
