@@ -168,7 +168,7 @@ var HTTPS = require('https');
 	  }
 	  else if(request.text && botRegexSchedule.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("Welcome to AGS! If you are new to this type of league, be sure to check out the rules while you're here. We have a bot that can link the rules for you by typing /rules. Type /help to see what else the bot can do! League name is AnyGivenSunday, Password is LionsSuck.");
+	    postMessage("Welcome to AGS! If you are new to this type of league, be sure to check out the rules while you're here. We have a bot that can link the rules for you by typing /rules. Type /help to see what else the bot can do! League name is AGS AnyGivenSunday, Password is SuckItRhett.");
 	    this.res.end();
 	  }
 	  
