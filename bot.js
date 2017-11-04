@@ -31,6 +31,11 @@ var HTTPS = require('https');
 	    postMessage("'Command' -- 'Function' \n/rules -- AGS league rules  \n/sch 'team initials' -- Team Schedule  \n/ply 'Player Name' -- Player Info  \n/ros 'team initials' -- Team Roster  \n/week -- Weekly Schedule  \n/DL -- DaddyLeagues Page  \n/standings -- Division Standings  \n/twitch 'username' -- Twitch Stream  \n/users -- Users list  \n/trades -- Current trade standing");
 	    this.res.end();
 	  } 
+	    else if(request.text && botRegexWk.test(request.text)) {
+	    this.res.writeHead(200);
+	    postMessage("https://docs.google.com/spreadsheets/d/1d0V8CJx_RgwybRa-CGELsfPoX8UMUMwfaILIPpXr6oo/edit?usp=sharing");
+	    this.res.end();
+	  } 
 	  else if(request.text && botRegexWelcome.test(request.text)) {
 	    this.res.writeHead(200);
 	    postMessage("http://i.imgur.com/GfJNU68.gif");
