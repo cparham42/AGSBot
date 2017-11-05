@@ -22,8 +22,7 @@ var HTTPS = require('https');
 	                "MIA","BUF","SF","WAS","NYJ","TB"]
 	  if(request.text && botRegex.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("Oops! Doesn't look like we have a DL yet!");
-	    //postMessage("http://daddyleagues.com/MFLMaddenLg/schedules");
+	    postMessage("http://daddyleagues.com/AnyGivenSunday1/schedules");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexSlut.test(request.text)) {
@@ -83,8 +82,7 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexDL.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("Oops! Doesn't look like we have a DL yet!");
-	    //postMessage("http://daddyleagues.com/MFLMaddenLg/team/"+request.text.substring(5,8)+"/depthchart");
+	    postMessage("http://daddyleagues.com/AnyGivenSunday1/team/"+request.text.substring(5,8)+"/depthchart");
 	    this.res.end();
 	  } 
 	  
@@ -100,8 +98,7 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexAd.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("Oops! Doesn't look like we have a DL yet!");
-	    //postMessage("http://daddyleagues.com/MFLMaddenLg/standings");
+	    postMessage("http://daddyleagues.com/AnyGivenSunday1/standings");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexRules.test(request.text)) {
@@ -111,22 +108,19 @@ var HTTPS = require('https');
 	  } 
 	  else if(request.text && botRegexGTA.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("Oops! Doesn't look like we have a DL yet!");
-	    //postMessage("http://daddyleagues.com/MFLMaddenLg");
+	    postMessage("http://daddyleagues.com/AnyGivenSunday1");
 	    this.res.end();
 	  } 
 	  else if(request.text && botRegexSC.test(request.text)) {
 	    this.res.writeHead(200);
-	    postMessage("Oops! Doesn't look like we have a DL yet!");
-	    //postMessage("http://daddyleagues.com/MFLMaddenLg/team/"+request.text.substring(5,8)+"/schedule");
+	    postMessage("http://daddyleagues.com/AnyGivenSunday1/team/"+request.text.substring(5,8)+"/schedule");
 	    this.res.end();
 	  }
 	  else if(request.text && botRegexP.test(request.text)) {
 	    this.res.writeHead(200);
 	    var req = request.text.substring(5,request.text.length);
 	    var rep = req.replace(/ /,"+");
-	    //postMessage("http://daddyleagues.com/MFLMaddenLg/players?name="+rep+"&position=all&team=all");
-	    postMessage("Oops! Doesn't look like we have a DL yet!");
+	    postMessage("http://daddyleagues.com/AnyGivenSunday1/players?name="+rep+"&position=all&team=all");
 	    this.res.end();
 	  }  
 	
